@@ -7,7 +7,7 @@
 def name_function(func_name):
     function_name = func_name.__name__.replace('_',' ').capitalize()
     function_arguments = func_name.__code__.co_varnames
-    arguments_name = list(function_arguments if len(function_arguments) != 0 else ['Аргументы отстутствуют'])
+    arguments_name = list(function_arguments if len(function_arguments) != 0 else ['Аргументы отсутствуют'])
     arguments_name = [arg.replace('_',' ').capitalize() for arg in arguments_name]
     print(f'Название функции: {function_name}. Аргументы функции: {", ".join(arguments_name)}')
     pass
